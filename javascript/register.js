@@ -1,6 +1,6 @@
 registerUser(name, email, password);
 alert("Registration successful!");
-window.location.href = "/registration-success";
+
 const name = document.getElementById('name').value;
 const email = document.getElementById('email').value;
 const password = document.getElementById('password').value;

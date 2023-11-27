@@ -1,0 +1,17 @@
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .dec, .inc {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .input-field {
+    width: 50px;
+    text-align: center;
+  }

@@ -26,7 +26,7 @@ document.querySelectorAll('.dec').forEach(btn => {
   });
 
   registerUser(name, email, password);
-window.location.href = "/registration-success";
+  alert("Registration successful!");
   
   // User registration function
 function registerUser(name, email, password) {
