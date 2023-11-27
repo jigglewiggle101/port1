@@ -1,0 +1,89 @@
+body {
+    background-color: #333333;
+  }
+  .grid-container {
+   text-align: center;
+  }
+
+  .row{
+    display: flex;
+    justify-content: center;
+  }
+
+ 
+  h1 {
+    color: #f1f2f3;
+    text-align: center;
+    font-family: Helvetica Neue;
+   }
+    h2 {
+     color: #f1f2f3;
+     text-align: center;
+     font-family: Helvetica Neue;
+    }
+    p {
+     color: #f1f2f3;  
+     font-family: Helvetica Neue;
+    }
+  
+    a{color:#f1f2f3; }
+
+    *{
+      box-sizing: border-box;
+    }
+ 
+.buttons, .music-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+h3{
+  text-align: center;
+  font-size: 20px;
+  font-family: Helvetica Neue;
+  color: #f1f2f3;
+}
+
+form{
+  display: block;
+  margin-top: 0em;
+}
+.h3 {
+  font-size: 20px;
+  gap: 20px;
+  font-family: Helvetica Neue;
+  color: #f1f2f3;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin: auto; /* add this line to center the navbar */
+  max-width: auto; /* add this line to limit the width of the navbar */
+}
+.navbar img {
+  height: 50px;
+  margin-right: 10px; /* add this line to move the logo to the left */
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar li {
+  margin: 0 10px;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
