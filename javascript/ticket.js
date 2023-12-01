@@ -1,8 +1,3 @@
-const userId = localStorage.getItem('userId');
-const userString = localStorage.getItem(`user-${userId}`);
-const userData = JSON.parse(userString);
-
-
 let totalPurchasedTickets = 0;
 
 // Add event listeners to the increment and decrement buttons
@@ -30,10 +25,24 @@ document.querySelectorAll('.dec').forEach(btn => {
     });
   });
 
-  const name = userData.name;
-const email = userData.email;
-const purchasedTickets = userData.purchasedTickets;
-const couponCode = userData.couponCode;
+  registerUser(name, email, password);
+window.location.href = "/registration-success";
+  
+  // User registration function
+function registerUser(name, email, password) {
+  // Hash the password for secure storage
+  const hashedPassword = bcrypt.hashSync(password, 10);
+
+  // Store user data in a database or local storage
+  const userData = {
+    name,
+    email,
+    hashedPassword
+  };
+  localStorage.setItem(`user-${email}`, JSON.stringify(userData));
+}
+
+
 
 // Ticket purchase function
 function purchaseTickets(userId, eventId, quantity) {
@@ -54,11 +63,10 @@ function purchaseTickets(userId, eventId, quantity) {
   }
 
   // Update user's purchased tickets
-  updateUserPurchasedTickets(userId,purchaseTickets, quantity);
+  updateUserPurchasedTickets(userId, quantity);
 
   // Process ticket purchase (e.g., update database, send confirmation email)
   return true;
 }
-
-
-
+  
+  
